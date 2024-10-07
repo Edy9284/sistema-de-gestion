@@ -3,195 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Cómo Redactar un Informe de Laboratorio?</title>
-    <style>.barra-inferior {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #2874A6;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            z-index: 1000;
-        }
-.boton-inicio {
-            background-color: transparent;
-            border: none;
-            color: white;
-            cursor: pointer;
-        }
-
-        .boton-inicio:hover {
-            text-decoration: underline;
-        }
+    <title>Index</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ABEBC6;
             margin: 0;
             padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 50px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #2874A6;
-            text-align: center;
-        }
-        h2 {
-            color: #0056b3;
-        }
-        p {
-            line-height: 2;
-            text-align: justify;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        .search-container {
+            background-color: #fdfefe;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
+            justify-content: space-between;
+            height: 100vh;
         }
-        .search-bar {
-            width: 80%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .search-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
+
+        header {
+            background-color: #333;
             color: white;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        header img {
+            width: 100px; 
+            height: auto;
+            margin-right: 350px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .button-3d {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 10px;
+            box-shadow: 0 5px #005f73;
             cursor: pointer;
+            width: 200px;
+            text-transform: uppercase;
         }
-        .search-button:hover {
-            background-color: #0056b3;
+
+        .button-3d:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
-        .results-container {
-            width: 80%;
-            max-height: 200px;
-            overflow-y: auto;
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .result-item {
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
             padding: 10px;
-            cursor: pointer;
-        }
-        .result-item:hover {
-            background-color: #ddd;
+            font-size: 1rem;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0;
+            color: red;
+            text-align: center;
+        }
     </style>
+
+    <!-- SDK de Firebase -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBoeIUWCQ939qjOmITS6vQWCrZevVgpxsk",
+            authDomain: "sistema-de-gestion-docente.firebaseapp.com",
+            projectId: "sistema-de-gestion-docente",
+            storageBucket: "sistema-de-gestion-docente.appspot.com",
+            messagingSenderId: "601211013611",
+            appId: "1:601211013611:web:2541822d0e803fb538b1ae"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
 </head>
-<body><div class="barra-inferior">
-        <button class="boton-inicio" onclick="scrollToTop()">Ir al inicio</button>
-    </div>
+<body>
+    <header>
+        <img src="Colocar aqui la ruta de la imagen" alt="Logo">
+        <h1>Colocar el título de mi página</h1>
+    </header>
+    <p>Haga click en el botón para ingresar al recurso.</p>
     <div class="container">
-        <div class="search-container">
-            <input type="text" id="searchInput" class="search-bar" placeholder="Buscar títulos...">
-            <div class="results-container" id="resultsContainer"></div>
-        </div>
-        <h1 id="titulo1"><u>Redacción de informe de prácticas de laboratorio</u></h1>
-        <p>Un informe de práctica de laboratorio es <strong>un documento que describe y analiza un experimento científico.</strong> Su estructura permite que otras personas puedan reproducir el experimento y verificar los resultados. A continuación se presenta una guía con los pasos y las secciones esenciales y recomendadas para redactar un informe de laboratorio.</p>
-        
-        <h2 id="titulo2">1. Portada</h2>
-        <p>Incluye el título del experimento, el nombre de quien o quienes lo redactaron, el nombre del maestro, la asignatura, la sección y la fecha.</p>
-        
-        <h2 id="titulo3">2. Introducción</h2>
-        <p>La introducción debe describir el contexto y los antecedentes del experimento. Debe incluir:</p>
-        <ul>
-            <br><li><strong>Objetivo:</strong> Explica lo que se pretende lograr en la práctica de laboratorio. El objetivo del experimento lo puedes verificar en la guía del manual de prácticas de laboratorio</li>
-            <br><li><strong>Hipótesis:</strong> Plantea una hipótesis que el experimento pondrá a prueba. La hipótesis es el resultado que se espera obtener al concluir con el proceso de experimentación</li>
-            <br><li><strong>Marco teórico:</strong> Proporciona información relevante sobre el tema del experimento. Aquí puedes agregar datos históricos de importancia para la temática estudiada. </li>
-        </ul>
-        
-        <h2 id="titulo4">3. Materiales y procedimientos</h2>
-        <p>Describe de manera detallada las herramientas y los reactivos utilizados y el procedimiento seguido. Esto debe ser lo suficientemente claro para que otra persona pueda comprender el experimento. Incluye:</p>
-        <ul>
-            <li>Lista de materiales y equipos.</li>
-            <li>Descripción paso a paso del procedimiento experimental.</li>
-            <li>Esquemas o diagramas (si son necesarios) para la comprensión del procedimiento.</li>
-        </ul>
-        
-        <h2 id="titulo5">4. Resultados</h2>
-        <p>Presenta los datos obtenidos durante el experimento de forma clara y organizada. Puedes usar tablas, gráficos y figuras para ilustrar los resultados. No interpretes los resultados en esta sección, solo preséntalos.</p>
-        
-        <h2 id="titulo6">5. Discusión</h2>
-        <p>Interpreta los resultados y explica qué significan en el contexto del experimento. Discute si los resultados apoyan la hipótesis inicial y analiza posibles errores o factores que pudieron haber influido en los resultados.</p>
-        
-        <h2 id="titulo7">6. Conclusiones</h2>
-        <p>Resume las conclusiones principales del experimento. Indica si se cumplió el objetivo y si la hipótesis fue confirmada o refutada. También puedes sugerir posibles mejoras para futuros experimentos.</p>
-        
-        <h2 id="titulo8">7. Referencias</h2>
-        <p>En caso de ser necesario, incluye todas las fuentes de información que consultaste para realizar el experimento y redactar el informe. Usa un formato de citas adecuado, como <a href="https://www.scribbr.es/citar/generador/apa/">APA.</a></p>
-        
-        <h2 id="titulo9">8. Anexos</h2>
-        <p>Incluye cualquier información adicional que sea relevante pero que no encaje en las otras secciones, como cálculos detallados, fotografías, enlaces a videos, entre otros.</p>
-
-        <p>A continuación se presenta un ejemplo de informe de práctica de laboratorio elaborado acorde con los pasos explicados con anterioridad:</p>
-        
-<p>Pulsa<a href="https://docs.google.com/document/d/1z3Zm_gnjmbtSag2UD_cBEsx1RdwvdqOyvs8kN-BePmA/edit?usp=sharing"> aquí </a>para ir al ejemplo.
-
-<h1>Elaboración de diapositivas para exposición de tematicas</h1>
-        <footer>Elaborado por: Emmanuel Díaz</footer>
+        <a href="https://drive.google.com/drive/folders/16jMlgXbcr3p1I3igX5iA-j42UZ1vtShx?usp=drive_link" class="button-3d">Información del docente</a>
+        <a href="https://drive.google.com/drive/folders/1OCkyM3AwMjDk8w9ZFr7R2vVXzNBj799c?usp=drive_link" class="button-3d">Plan diario</a>
+        <a href="https://drive.google.com/drive/folders/1MdXqlapHPVg2XvoMJInF3ncA0jrk8xqF?usp=drive_link" class="button-3d">plan de unidad</a>
+        <a href="https://drive.google.com/drive/folders/1A5cOUbEsd8WWZRVcChBHcg39XiUssUSe?usp=drive_link" class="button-3d">Reporte de calificaciones</a>
+        <a href="https://drive.google.com/drive/folders/1i4pj5oC-CoRQEJ0NzCR8-jLCgC1XBNtS?usp=drive_link" class="button-3d">Instrumentos de evaluación</a>
+        <a href="https://drive.google.com/drive/folders/14l--8eOuajve7vsiHSLyKuFV56H6P43I?usp=drive_link" class="button-3d">Página 4</a>
     </div>
-<script>
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'auto' });
-        }
-    </script>
-    <script>
-        function normalizeText(text) {
-            return text
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "");
-        }
-
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const input = normalizeText(this.value);
-            const resultsContainer = document.getElementById('resultsContainer');
-            resultsContainer.innerHTML = '';
-
-            if (input) {
-                const titles = document.querySelectorAll('h1, h2');
-                titles.forEach(title => {
-                    if (normalizeText(title.textContent).includes(input)) {
-                        const resultItem = document.createElement('div');
-                        resultItem.textContent = title.textContent;
-                        resultItem.className = 'result-item';
-                        resultItem.addEventListener('click', () => {
-                            title.scrollIntoView();
-                            titles.forEach(t => t.style.backgroundColor = 'transparent');
-                            title.style.backgroundColor = 'yellow';
-                        });
-                        resultsContainer.appendChild(resultItem);
-                    }
-                });
-
-                if (!resultsContainer.innerHTML) {
-                    const noResultItem = document.createElement('div');
-                    noResultItem.textContent = 'No se encontraron resultados.';
-                    noResultItem.className = 'result-item';
-                    resultsContainer.appendChild(noResultItem);
-                }
-            }
-        });
-    </script>
-
+    <footer>
+        Año escolar 2024-2025
+    </footer>
 </body>
 </html>
